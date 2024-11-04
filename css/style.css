@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f1f9;
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fdf2ff;
+    padding: 20px 60px; /* Espaçamento lateral para afastar os elementos das bordas */
+}
+
+.logo img {
+    width: 180px; /* Tamanho do logotipo */
+}
+
+.campodebusca {
+    display: flex;
+    flex-grow: 1;
+    max-width: 350px; /* Reduz a largura máxima do campo de busca */
+    margin: 0 20px;
+}
+
+.campodebusca input {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #d9c8db; /* Cor da borda do campo de busca */
+    border-radius: 25px; /* Borda arredondada */
+    font-size: 16px;
+    color: #4b4b4b;
+    background-color: #fff; /* Cor de fundo */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+    transition: all 0.3s ease; /* Transição suave para hover */
+}
+
+.campodebusca input::placeholder {
+    color: #a9a9a9; /* Cor do placeholder */
+}
+
+.campodebusca input:focus {
+    outline: none;
+    border-color: #b98dbd; /* Cor da borda ao focar */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Destaque maior ao focar */
+}
+
+.opcoes-usuario {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.conta {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #4b4b4b;
+}
+
+.conta .icone {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.conta a {
+    color: #4b4b4b;
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.carrinho {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #4b4b4b;
+}
+
+.carrinho .icone {
+    width: 24px;
+    height: 24px;
+    margin-left: 5px; /* Ícone ao lado do número */
+}
+
+.quantidade-carrinho {
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #4b4b4b;
+    margin-right: 5px; /* Espaçamento entre o número e o ícone */
+}
+
+.menu {
+    background-color: #f7e7f4;
+    padding: 10px 0;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #7e6a8d;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #a575a5;
+}
