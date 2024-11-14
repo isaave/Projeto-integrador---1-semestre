@@ -1,120 +1,134 @@
+/* Geral */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f1f9;
+    background-color: #f5e8ff; /* Cor de fundo para combinar com o layout */
 }
 
+/* Cabeçalho */
 .cabecalho {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #fdf2ff;
-    padding: 20px 60px; /* Espaçamento lateral para afastar os elementos das bordas */
+    background-color: #e9d7f8; /* Altera o fundo do cabeçalho para um lilás claro */
+    padding: 20px 60px; /* Reduz o padding para dar menos espaçamento vertical */
+    border-bottom: 1px solid #e5cce7; /* Linha sutil entre o cabeçalho e o menu */
 }
 
+/* Logo */
 .logo img {
-    width: 180px; /* Tamanho do logotipo */
+    padding-left: 80%;
 }
 
+/* Campo de Busca com Ícone */
 .campodebusca {
     display: flex;
-    flex-grow: 1;
-    max-width: 350px; /* Reduz a largura máxima do campo de busca */
-    margin: 0 20px;
+    align-items: center;
+    max-width: 300px;
+    margin: 0 10px;
+    position: relative; /* Para que o botão possa ser posicionado dentro do campo */
 }
 
 .campodebusca input {
     width: 100%;
-    padding: 10px 20px;
-    border: 1px solid #d9c8db; /* Cor da borda do campo de busca */
-    border-radius: 25px; /* Borda arredondada */
-    font-size: 16px;
+    padding: 8px 16px;
+    padding-right: 40px; /* Espaço para o ícone de busca */
+    border: 1px solid #d3b7d8;
+    border-radius: 20px;
+    font-size: 14px;
     color: #4b4b4b;
-    background-color: #fff; /* Cor de fundo */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
-    transition: all 0.3s ease; /* Transição suave para hover */
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .campodebusca input::placeholder {
-    color: #a9a9a9; /* Cor do placeholder */
+    color: #a9a9a9;
 }
 
-.campodebusca input:focus {
-    outline: none;
-    border-color: #b98dbd; /* Cor da borda ao focar */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Destaque maior ao focar */
+.btn-busca {
+    position: absolute;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: #a9a9a9;
+    font-size: 16px;
+    cursor: pointer;
 }
 
+.btn-busca:hover {
+    color: #7e6a8d; /* Cor do ícone no hover */
+}
+
+/* Opções do Usuário */
 .opcoes-usuario {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
-.conta {
+.icone-login {
     display: flex;
     align-items: center;
-    font-size: 14px;
     color: #4b4b4b;
+    font-size: 14px;
 }
 
-.conta .icone {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
-}
-
-.conta a {
-    color: #4b4b4b;
-    text-decoration: none;
-    font-size: 14px;
+.icone-login img {
+    width: 20px; /* Ajusta o tamanho do ícone */
     margin-right: 5px;
+}
+
+.icone-login h6 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.icone-login a {
+    color: #4b4b4b;
+    font-size: 12px;
+    text-decoration: none;
 }
 
 .carrinho {
     display: flex;
     align-items: center;
-    font-size: 14px;
-    color: #4b4b4b;
 }
 
-.carrinho .icone {
-    width: 24px;
-    height: 24px;
-    margin-left: 5px; /* Ícone ao lado do número */
+.carrinho img {
+    width: 20px; /* Ajusta o tamanho do ícone do carrinho */
 }
 
 .quantidade-carrinho {
     background-color: #e0e0e0;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
+    font-size: 10px;
     color: #4b4b4b;
-    margin-right: 5px; /* Espaçamento entre o número e o ícone */
+    margin-right: 5px;
 }
 
+/* Menu */
 .menu {
     background-color: #f7e7f4;
     padding: 10px 0;
+    border-top: 1px solid #e5cce7; /* Linha sutil entre o cabeçalho e o menu */
 }
 
 .menu ul {
     display: flex;
     justify-content: center;
     list-style: none;
-}
-
-.menu li {
-    margin: 0 15px;
+    gap: 50px; /* Aumenta o espaço entre os itens do menu */
 }
 
 .menu a {
@@ -127,3 +141,55 @@ body {
 .menu a:hover {
     color: #a575a5;
 }
+
+/*Destaques e Mais vendidos*/
+.cards-produtos{
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.produtos{
+    max-width: 300px;
+    overflow: hidden;
+}
+/*depoimentos*/
+.depoimentos-container{
+    display: flex;
+    justify-content: space-around;
+}
+/*icone*/
+.conteudo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.icones{
+    text-align: center;
+}
+
+
+/*rodape*/
+
+ .contato{
+    background: #E5CBF5;
+ }
+
+ .email{
+    display: flex;
+ }
+
+ .final-redessociais h4{
+text-align: center;
+ }
+
+ .final-redessociais i a{
+    justify-content: space-around;
+ }
+
+footer{
+    height: 30px;
+    background: black;
+    color: white;
+    text-align: center;
+ }
