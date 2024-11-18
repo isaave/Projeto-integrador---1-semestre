@@ -7,37 +7,38 @@
 }
 
 body {
-    background-color: #f5e8ff; /* Cor de fundo para combinar com o layout */
+    background-color: #ffffff;
 }
 
 /* Cabeçalho */
-.cabecalho {
+.Cabecalho {
+    background: #dbcde7;
+    border-bottom: 1px solid #9414a571;
+}
+
+.container-cabecalho {
+    width: 1250px;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #e9d7f8; /* Altera o fundo do cabeçalho para um lilás claro */
-    padding: 20px 60px; /* Reduz o padding para dar menos espaçamento vertical */
-    border-bottom: 1px solid #e5cce7; /* Linha sutil entre o cabeçalho e o menu */
+    background-color: #dbcde7;
+    padding: 20px 60px;
 }
 
-/* Logo */
-.logo img {
-    padding-left: 80%;
-}
 
-/* Campo de Busca com Ícone */
 .campodebusca {
     display: flex;
     align-items: center;
-    max-width: 300px;
+    max-width: 250px;
     margin: 0 10px;
-    position: relative; /* Para que o botão possa ser posicionado dentro do campo */
+    position: relative;
 }
 
 .campodebusca input {
     width: 100%;
     padding: 8px 16px;
-    padding-right: 40px; /* Espaço para o ícone de busca */
+    padding-right: 40px;
     border: 1px solid #d3b7d8;
     border-radius: 20px;
     font-size: 14px;
@@ -61,67 +62,76 @@ body {
 }
 
 .btn-busca:hover {
-    color: #7e6a8d; /* Cor do ícone no hover */
+    color: #7e6a8d;
 }
 
-/* Opções do Usuário */
 .opcoes-usuario {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px; /* Espaçamento entre login e carrinho */
 }
 
-.icone-login {
+.opcoes-usuario img {
+    width: 40px; /* Adapta o tamanho da imagem ao container-login */
+    height: 40px;
+}
+
+.container-login {
     display: flex;
-    align-items: center;
-    color: #4b4b4b;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     font-size: 14px;
+    color: #000000;
 }
 
-.icone-login img {
-    width: 20px; /* Ajusta o tamanho do ícone */
-    margin-right: 5px;
-}
-
-.icone-login h6 {
+.container-login h6 {
     margin: 0;
-    font-weight: bold;
-    font-size: 12px;
 }
 
-.icone-login a {
-    color: #4b4b4b;
+.container-login a {
     font-size: 12px;
+    color: #000000;
     text-decoration: none;
+}
+
+.container-login a:hover {
+    text-decoration: underline;
 }
 
 .carrinho {
     display: flex;
     align-items: center;
+    gap: 5px; /* Pequeno espaço entre o ícone e o número */
+    position: relative;
 }
 
 .carrinho img {
-    width: 20px; /* Ajusta o tamanho do ícone do carrinho */
+    width: 30px; /* Ajusta o tamanho do ícone */
+    height: 30px;
 }
 
 .quantidade-carrinho {
-    background-color: #e0e0e0;
+    background-color: #fff;
+    color: #000;
     border-radius: 50%;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 10px;
-    color: #4b4b4b;
-    margin-right: 5px;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 /* Menu */
-.menu {
+.menu{
+    border-top: 1px solid #2e2a2e; /* Linha sutil entre o cabeçalho e o menu */
+
+}
+.container-menu{
     background-color: #f7e7f4;
-    padding: 10px 0;
-    border-top: 1px solid #e5cce7; /* Linha sutil entre o cabeçalho e o menu */
+    padding-bottom: 4px;
 }
 
 .menu ul {
@@ -143,8 +153,34 @@ body {
 }
 
 /*Destaques e Mais vendidos*/
+.cards1{
+    background: #ffffff
+}
+.cards-destaques h1{
+    font-size: 28px;
+    color: #0a080a; /* Cor marrom para o título */
+    font-weight: bold;
+    border-bottom: 2px solid #a68dac; /* Linha sob o título */
+    padding-right: 5%;
+    padding-left: 2%;
+    text-align: left; /* Alinha o título à esquerda */}
+
+.card-maisventidos h1{
+    font-size: 28px;
+    color: #0a080a; /* Cor marrom para o título */
+    font-weight: bold;
+    border-bottom: 2px solid #a68dac; /* Linha sob o título */
+    padding-right: 5%;
+    padding-left: 2%;
+    text-align: left; /* Alinha o título à esquerda */
+}
+.cards-produtos {
+    padding-top: 1%;
+}
 .cards-produtos{
-    margin: 20px;
+    width: 1250px;
+    background: #4b4b4b;
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -153,43 +189,415 @@ body {
     max-width: 300px;
     overflow: hidden;
 }
-/*depoimentos*/
-.depoimentos-container{
+
+/* Depoimentos */
+.container2 {
+    background: #ffffff;
+    padding: 20px;
+    margin: 0 auto;
+    
+}
+
+.container-dep h1 {
+    font-size: 28px;
+    color: #0a080a; /* Cor marrom para o título */
+    font-weight: bold;
+    border-bottom: 2px solid #a68dac; /* Linha sob o título */
+    padding-right: 5%;
+    padding-left: 2%;
+    text-align: left; /* Alinha o título à esquerda */
+}
+
+.container2 {
+    width: 1250px;
+    margin: 0 auto;
     display: flex;
+    justify-content: space-around; /* Alinha os itens ao canto esquerdo */
+}
+
+.container-depoimento {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os cards */
+    flex-wrap: wrap; /* Permite que os cards se ajustem em telas menores */
+}
+
+.depoimentos-container {
+    background-color: #fff; /* Fundo branco */
+    border: 1px solid #cc90d4; /* Borda sutil */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left; /* Alinha o texto à esquerda */
+    flex: 1;
+}
+
+
+//* Rodapé */
+/* Bloco Contato Geral */
+.contato {
+    display: flex;
+    flex-direction: column; /* Empilha verticalmente os elementos principais */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    gap: 30px; /* Espaçamento entre os elementos */
+    padding: 20px;
+
+}
+.container-tudo{
+    background: #5c2764;
+    
+}
+.containe-email{
+    width: 800px;
+    margin: 0 auto;
+    background: #14cc2d;
+}
+
+.container-iconeeescrita{
+    display: flex;
+}
+.container-iconeeescrita{
+    padding-right: 2%;
+}
+
+.email {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 15px;
     justify-content: space-around;
 }
-/*icone*/
-.conteudo{
+
+.email i {
+    font-size: 40px;
+    color: #a575a5;
+}
+
+.email p {
+    padding-top: 4%;
+    padding-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #4b4b4b;
+
+}
+
+
+.email .campo-com-botao {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    max-width: 400px;
+    width: 100%;
+    gap: ;
+}
+
+.email input {
+    width: 1250px; /* Ocupa toda a largura */
+    padding: 10px; /* Espaçamento interno */
+    padding-bottom: 4%;
+    border: none; /* Remove borda padrão */
+    border-radius: 8px; /* Arredondamento dos campos */
+    background-color: #E8E3F5; /* Fundo cinza claro */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.email button {
+    width: 15%; /* Ocupa toda a largura */
+    padding: 10px; /* Altura do botão */
+    background-color: #7F5A96; /* Cor roxa escura */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda */
+    border-radius: 8px; /* Arredondamento */
+    font-size: 16px; /* Tamanho do texto */
+    cursor: pointer; /* Muda o cursor ao passar */
+    transition: background-color 0.3s; /* Animação suave */
+
+}
+
+
+.email button:hover {
+    background-color: #80407e;
+}
+
+
+.final-redessociais {
+    text-align: center;
+    padding-top: 4px;
+    background: #E5CBF5;
+}
+
+.final-redessociais h4 {
+    font-size: 18px;
+    color: #000000;
+    background: #E5CBF5;
+    width: 1250px;
+    margin: 0 auto;
+    padding-top: 1%;
+}
+
+.container-redes{
+    display: flex;
+    padding-bottom: 1%;
+}
+.redes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #E5CBF5;
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.final-redessociais i {
+    font-size: 24px;
+    color: #333333;
+}
+
+.final-redessociais a {
+    font-size: 12px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.final-redessociais a:hover{
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    padding: 2px;
+}
+
+
+
+
+/* Login  */
+.login {
+    width: 300px;
+    margin: 100px auto; /* Centraliza a caixa */
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+
+.login h1 {
+    font-size: 24px; /* Tamanho do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.form-control {
+    background-color: #F8F2FF; /* Fundo roxo */
+    padding: 20px; /* Espaçamento interno */
+    border: none; /* Remove a borda externa */
+    border-radius: 15px; /* Arredondamento */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 8px; /* Espaçamento entre o label e o input */
+    font-size: 14px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    color: #4B234D; /* Cor do texto */
+    text-align: left;
+}
+
+.form-control input {
+    width: 100%; /* Ocupa toda a largura */
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Espaço entre inputs */
+    border: none; /* Remove borda padrão */
+    border-radius: 8px; /* Arredondamento dos campos */
+    background-color: #E8E3F5; /* Fundo cinza claro */
+}
+
+.form-control p {
+    font-size: 12px; /* Tamanho da fonte */
+    color: #4B234D; /* Cor do texto */
+    margin-bottom: 20px; /* Espaço antes do botão */
+}
+
+.form-control p a {
+    color: #4B234D; /* Mesma cor do texto */
+    text-decoration: underline; /* Sublinhar */
+}
+
+.form-control button {
+    width: 100%; /* Ocupa toda a largura */
+    padding: 10px; /* Altura do botão */
+    background-color: #7F5A96; /* Cor roxa escura */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda */
+    border-radius: 8px; /* Arredondamento */
+    font-size: 16px; /* Tamanho do texto */
+    cursor: pointer; /* Muda o cursor ao passar */
+    transition: background-color 0.3s; /* Animação suave */
+}
+
+.form-control button:hover {
+    background-color: #6C4D85; /* Escurece no hover */
+}
+
+
+/*Cadastrar*/
+
+.cadastrar {
+    width: 400px;
+    margin: 50px auto; /* Centraliza o formulário */
+    text-align: center;
+}
+
+.cadastrar h1 {
+    font-size: 24px;
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+.container-form {
+    background-color: #F8F2FF; /* Fundo lilás bem claro */
+    padding: 20px;
+    border-radius: 15px; /* Arredondamento das bordas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.form-control2 {
+    text-align: left; /* Alinha o conteúdo à esquerda */
+}
+
+/* Labels */
+.form-control2 label {
+    display: block;
+    margin-bottom: 8px; /* Espaçamento entre label e input */
+    font-size: 14px; /* Tamanho da fonte */
+    font-weight: bold;
+    color: #4B234D; /* Roxo escuro */
+}
+
+/* Inputs */
+.form-control2 input[type="text"],
+.form-control2 input[type="email"],
+.form-control2 input[type="password"],
+.form-control2 input[type="date"] {
+    width: 100%; /* Preenche a largura total */
+    padding: 10px;
+    margin-bottom: 15px; /* Espaço entre campos */
+    border: none;
+    border-radius: 8px; /* Arredondamento */
+    background-color: #E8E3F5; /* Fundo cinza claro */
+}
+
+/* Checkbox e Radio */
+.form-control2 input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Texto informativo */
+.container-form p {
+    font-size: 12px;
+    color: #4B234D;
+    margin: 15px 0; /* Espaçamento em cima e embaixo */
+}
+
+/* Links */
+.container-form p a {
+    color: #4B234D;
+    text-decoration: underline;
+}
+
+/* Botão */
+.container-form button {
+    width: 100%; /* Largura total do botão */
+    padding: 10px;
+    background-color: #7F5A96; /* Roxo escuro */
+    color: white; /* Texto branco */
+    border: none;
+    border-radius: 8px; /* Arredondamento */
+    font-size: 16px;
+    cursor: pointer; /* Aponta a mão no hover */
+    transition: background-color 0.3s;
+}
+
+/* Botão: Hover */
+.container-form button:hover {
+    background-color: #6C4D85; /* Escurece no hover */
+}
+
+
+/*Pagina sobre nós*/
+.container-sobrenos h1{
+    padding-left: 5%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 30px;
+    color: #333;
+}
+
+.bemvindos h3 {
+    width: 1230px;
+    margin: 0 auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    color: white;
+    background: #9E7FAF;
+    border-radius: 10px; /* Bordas arredondadas */
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 20px;
+}
+
+.imgsobrenos{
+    display: flex;
+    width: 1500px;
+    margin: 0 auto;
+    padding-top: 3%;
+    font-size: 18px;
+    justify-content: space-around;
+    padding-bottom: 6%;
+}
+
+.imgsobrenos img{
+    width: 412px; /* Define a largura */
+    height: 450px; /* Define a altura */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
+}
+.txt-sobrenos{
+    width: 765px;   
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 23px;
+    color: #555;
+}
+
+.conteudo {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones */
+    gap: 80px; /* Espaçamento entre os ícones */
+    flex-wrap: wrap; /* Ajusta layout em telas menores */
+    padding: 40px 0;
+    background: #ffffff; /* Fundo claro */
 }
 
 .icones{
-    text-align: center;
+    display: flex;
+    flex-direction: column; /* Ícone acima do texto */
+    align-items: center; /* Centraliza os elementos */
+    width: 150px; /* Largura uniforme para cada ícone */
+    text-align: center; /* Centraliza o texto */
+}
+.icones img {
+    width: 60px; /* Tamanho dos ícones */
+    height: auto; /* Mantém a proporção */
+    margin-bottom: 10px; /* Espaçamento abaixo do ícone */
 }
 
-
-/*rodape*/
-
- .contato{
-    background: #E5CBF5;
- }
-
- .email{
-    display: flex;
- }
-
- .final-redessociais h4{
-text-align: center;
- }
-
- .final-redessociais i a{
-    justify-content: space-around;
- }
-
-footer{
-    height: 30px;
-    background: black;
-    color: white;
-    text-align: center;
- }
+.icones h6 {
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 15px;
+    color: #000000;
+}
