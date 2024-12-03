@@ -10,6 +10,7 @@
 </head>
 <body>
     <!--Começa Cabeçalho-->
+    <div class="containe-cabecalhoemenu">
 <header class="Cabecalho">
   <div class="container-cabecalho">
     <div class="logo">
@@ -17,7 +18,7 @@
             <img src="img/Logo.png">
         </a>
     </div>
-    <div class="campodebusca">
+    <div class="campodebusca1">
         <input type="text" placeholder="O que procura?">
         <button type="button" class="btn-busca">
           <i class="bi bi-search"></i>
@@ -36,11 +37,10 @@
     </div>
     </div>
   </div>
-
   </header>
     <!--Fecha cabecalho-->
-
     <!--Começa Menu-->
+  <!--Começa Menu-->
   <div class="menu">
     <nav class="container-menu">
         <ul>
@@ -48,40 +48,36 @@
             <li><a href="sabonete.html">Sabonetes</a></li>
             <li><a href="acessorios.html">Acessórios</a></li>
             <li><a href="vela.html">Vela</a></li>
-            <li><a href="aromatizador.html">Aromatizador</a></li>
+            <li><a href="aromatizante.html">Aromatizador</a></li>
             <li><a href="oleoessencial.html">Oléo essencial</a></li>
         </ul>
     </nav>
 </div>
-
-
-    <div id="carouselExampleIndicators" class="carousel slide">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+</div>
+  <!--Fecha menu-->
+      <!--Começa carrossel-->
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/1.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/2.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/3.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="img/1.png" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="img/2.png" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="img/3.png" class="d-block w-100" alt="...">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    <br>
+      <br>
 <!--Fecha carrossel-->
 
 <!--Começa destaques-->
@@ -92,29 +88,29 @@
           <div class="produtos">
             <img src="img/vela-lavanda.png" alt="">
             <h4>Lavanda</h4>
-            <p>...</p>
-            <h2>R$ 50,00</h2>
+            <h4>140g</h4>
+            <h2>R$ 22,00</h2>
             <button class="btn-comprar">Comprar</button>
           </div>
           <div class="produtos">           
            <img src="img/essencia-ylanglang.png" alt="">
             <h4>Ylang Ylang</h4>
-            <p>...</p>
-            <h2>R$ 50,00</h2>
+            <h4>10ml</h4>
+            <h2>R$ 53,90</h2>
             <button class="btn-comprar">Comprar</button>
           </div>
           <div class="produtos">
-            <img src="img/acessorio-difusorportatio.png" alt="">
-            <h4>Difusor Portátil</h4>
-            <p>...</p>
-            <h2>R$ 50,00</h2>
+            <img src="img/sbnt-aveiamel.png" alt="">
+            <h4>Sabonete Aveia e Mel</h4>
+            <h4>110g</h4>
+            <h2>R$ 30,00</h2>
             <button class="btn-comprar">Comprar</button>
           </div>
           <div class="produtos">
             <img src="img/aroma-lavanda.png" alt="">
             <h4>Lavanda</h4>
-            <p>...</p>
-            <h2>R$ 50,00</h2>
+            <h4>250ml</h4>
+            <h2>R$ 40,00</h2>
             <button class="btn-comprar">Comprar</button>
         </div>
       </div>
@@ -129,31 +125,31 @@
         <div class="cards1">
         <div class="cards-produtos">
         <div class="produtos">
-          <img src="img/vela-camomila.png" alt="">
-          <h4>Camomila</h4>
-          <p>...</p>
-          <h2>R$ 50,00</h2>
+          <img src="img/sbnt-argilarosalavanda.png" alt="">
+          <h4>Sabonete Argila rosa e Lavanda</h4>
+          <h4>110g</h4>
+          <h2>R$ 27,80</h2>
           <button class="btn-comprar">Comprar</button>
         </div>
         <div class="produtos">
           <img src="img/acessorio-buchavegetal.png" alt="">
           <h4>acessorio-buchavegetal</h4>
           <p>...</p>
-          <h2>R$ 50,00</h2>
+          <h2>R$ 19,20</h2>
           <button class="btn-comprar">Comprar</button>
         </div>
         <div class="produtos">
           <img src="img/aroma-citronela.png" alt="">
           <h4>Citronela</h4>
-          <p>...</p>
-          <h2>R$ 50,00</h2>
+          <h4>250ml</h4>
+          <h2>R$ 32,40</h2>
           <button class="btn-comprar">Comprar</button>
         </div>
         <div class="produtos">
           <img src="img/vela-bluetansy.png" alt="">
           <h4>Blue Tansy</h4>
-          <p>...</p>
-          <h2>R$ 50,00</h2>
+          <h4>140g</h4>
+          <h2>R$ 23,40</h2>
           <button class="btn-comprar">Comprar</button>
         </div>
         </div>
@@ -199,40 +195,47 @@
 
 
 <!--Começa rodapé-->
-    <div class="contato">
-      <div class="container-tudo">
-      <div class="containe-email">
-        <div class="email">
-          <div class="container-iconeeescrita">
-          <i class="bi bi-envelope"></i>          
-          <p>Receba nossas Novidades</p>
-        </div>
-          <div class="campodebusca">
-            <input type="text" placeholder="Digite seu email">
-        </div>
-        <button>Enviar</button>
-        </div>
-      </div>
-    <div class="final-redessociais">
-        <h4>Redes Sociais</h4>
-        <div class="container-redes">
-        <div class="redes">
-        <i class="bi bi-instagram"></i>        
-        <a href="#">@divina_essencia</a>   
-        </div>
-        <div class="redes">
-        <i class="bi bi-facebook"></i> 
-        <a href="#">Divina Essência</a>
-        <link rel="stylesheet" href="#">
-      </div>
+<div class="contato">
+  <div class="container-tudo">
+  <div class="containe-email">
+    <div class="email">
+      <div class="container-iconeeescrita">
+      <i class="bi bi-envelope"></i>          
+      <p>Receba nossas Novidades</p>
     </div>
+      <div class="campodebusca1">
+        <input type="text" placeholder="Digite seu email">
     </div>
+    <button>Enviar</button>
     </div>
   </div>
-      <footer>
-        <p>Todos Direitos reservados a Isadora Burgos e Isabella Avelina - 2024@</p>
-      </footer>
+<div class="final-redessociais">
+    <h4>Redes Sociais</h4>
+    <div class="container-redes">
+    <div class="redes">
+    <i class="bi bi-instagram"></i>        
+    <a href="#">@divina_essencia</a>   
+    </div>
+    <div class="redes">
+    <i class="bi bi-facebook"></i> 
+    <a href="#">Divina Essência</a>
+    <link rel="stylesheet" href="#">
   </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</div>
+</div>
+</div>
+</div>
+  <footer>
+    <p>Todos Direitos Reservados a Isadora Burgos e Isabella Avelina - 2024@</p>
+  </footer>
+</div>
+  <!--Fecha rodapé-->
+    <!--Começa icone fixo de wpp-->
+<div class="whats">
+  <a href="https://wa.me/5511913119603" target="_blank">
+  <img src="img/wppsemfundo.png"  width="70" alt="whatsapp" title="Fale conosco pelo whatsapp">
+</a>
+  <!--Fecha icone fixo de wpp-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

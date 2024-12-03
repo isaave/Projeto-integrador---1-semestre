@@ -3,51 +3,66 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
     background-color: #ffffff;
+    font-family: 'Inria Sans', sans-serif; /* Fonte utilizada no projeto */
+    color: #333; /* Cor padrão do texto */
+    margin: 0; /* Remove margem padrão */
+    padding: 0; /* Remove preenchimento padrão */
+    line-height: 1.6; /* Melhora a legibilidade */
+}
+
+/*Icone de WhatsApp*/
+.whats{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+}
+
+.containe-cabecalhoemenu{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
 }
 
 /* Cabeçalho */
 .Cabecalho {
-    background: #dbcde7;
-    border-bottom: 1px solid #9414a571;
+    background: #f0d7f1; /* Mantendo um tom pastel claro */
+    border-bottom: 1px solid #e1c2e1; /* Linha inferior suave */
 }
 
 .container-cabecalho {
-    width: 1250px;
+    width: 1200px;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #dbcde7;
-    padding: 20px 60px;
+    padding: 20px 0;
 }
 
 
-.campodebusca {
+.campodebusca1 {
     display: flex;
     align-items: center;
-    max-width: 250px;
-    margin: 0 10px;
+    max-width: 300px;
     position: relative;
 }
 
-.campodebusca input {
+.campodebusca1 input {
     width: 100%;
-    padding: 8px 16px;
-    padding-right: 40px;
-    border: 1px solid #d3b7d8;
-    border-radius: 20px;
+    padding: 10px 20px;
+    border: 1px solid #e3d0e3;
+    border-radius: 10px;
     font-size: 14px;
     color: #4b4b4b;
     background-color: #fff;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.campodebusca input::placeholder {
+.campodebusca1 input::placeholder {
     color: #a9a9a9;
 }
 
@@ -57,7 +72,7 @@ body {
     background-color: transparent;
     border: none;
     color: #a9a9a9;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
 }
 
@@ -68,30 +83,26 @@ body {
 .opcoes-usuario {
     display: flex;
     align-items: center;
-    gap: 20px; /* Espaçamento entre login e carrinho */
-}
-
-.opcoes-usuario img {
-    width: 40px; /* Adapta o tamanho da imagem ao container-login */
-    height: 40px;
+    gap: 25px; /* Espaçamento entre as opções */
 }
 
 .container-login {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
     font-size: 14px;
-    color: #000000;
+    color: #4a4a4a;
 }
 
 .container-login h6 {
     margin: 0;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .container-login a {
     font-size: 12px;
-    color: #000000;
+    color: #4a4a4a;
     text-decoration: none;
 }
 
@@ -102,12 +113,11 @@ body {
 .carrinho {
     display: flex;
     align-items: center;
-    gap: 5px; /* Pequeno espaço entre o ícone e o número */
-    position: relative;
+    gap: 8px; /* Ajuste do espaçamento */
 }
 
 .carrinho img {
-    width: 30px; /* Ajusta o tamanho do ícone */
+    width: 30px;
     height: 30px;
 }
 
@@ -115,42 +125,177 @@ body {
     background-color: #fff;
     color: #000;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 12px;
     font-weight: bold;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
 }
+
 
 /* Menu */
-.menu{
-    border-top: 1px solid #2e2a2e; /* Linha sutil entre o cabeçalho e o menu */
-
+.menu {
+    border-top: 1px solid #dcbad3;
+    background-color: #fef3f9;
 }
-.container-menu{
-    background-color: #f7e7f4;
-    padding-bottom: 4px;
+
+.container-menu {
+    padding: 10px 0;
 }
 
 .menu ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 50px; /* Aumenta o espaço entre os itens do menu */
+    gap: 120px; /* Aumenta o espaço entre os itens */
 }
 
 .menu a {
     text-decoration: none;
-    color: #7e6a8d;
-    font-size: 16px;
-    font-weight: bold;
+    color: #5c4a60;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Transição suave adicionada */
+
 }
 
 .menu a:hover {
     color: #a575a5;
+    text-decoration: underline;
+    font-weight: 700; /* Negrito aumentado no hover */
 }
+
+/* Rodapé */
+.contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+.container-tudo {
+    background: #9E7FAF; /* Fundo roxo claro */
+    width: 100%;
+}
+
+.containe-email {
+    width: 100%;
+    margin: 0;
+    background: #9E7FAF; /* Mesmo fundo que o container principal */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.container-iconeeescrita {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.email i {
+    font-size: 36px;
+    color: #000000;
+}
+
+.email p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    margin: 0;
+}
+
+.campodebusca input {
+    width: 600px; /* Largura do campo */
+    padding: 10px; /* Espaçamento interno */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #ffffff; /* Fundo cinza claro */
+    font-size: 16px; /* Tamanho do texto */
+    color: #4B4B4B; /* Texto cinza escuro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    margin-right: 15px; /* Espaçamento entre o campo e o botão */}
+.email {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #9E7FAF; /* Fundo roxo claro */
+    padding: 10px 20px; /* Espaçamento interno */
+    width: 100%; /* Ocupa toda a largura do container */
+    max-width: 1200px; /* Limite de largura */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+.email button {
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: #FFFFFF; /* Fundo branco */
+    color: #000000; /* Cor do texto roxa clara */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho do texto */
+    font-weight: bold; /* Negrito */
+    cursor: pointer; /* Muda o cursor ao passar */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+.email button:hover {
+    background-color: #8F77A7;
+}
+
+.final-redessociais {
+    background: #EADBEA; /* Fundo lilás */
+    text-align: center;
+    padding: 20px 0;
+}
+
+.final-redessociais h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.container-redes {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Espaçamento entre os itens das redes sociais */
+}
+
+.redes {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.final-redessociais i {
+    font-size: 24px;
+    color: #000000;
+}
+
+.final-redessociais a {
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.final-redessociais a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px 0;
+}
+
 
 /*Destaques e Mais vendidos*/
 .cards1{
@@ -158,44 +303,229 @@ body {
 }
 .cards-destaques h1{
     font-size: 28px;
-    color: #0a080a; /* Cor marrom para o título */
+    color: #0a080a; 
     font-weight: bold;
     border-bottom: 2px solid #a68dac; /* Linha sob o título */
     padding-right: 5%;
-    padding-left: 2%;
+    padding-left: 4%;
+    padding-bottom: 1%;
     text-align: left; /* Alinha o título à esquerda */}
+
+    .cardsvendas h1{
+        font-size: 28px;
+        color: #0a080a; 
+        font-weight: bold;
+        border-bottom: 2px solid #a68dac; /* Linha sob o título */
+        padding-right: 5%;
+        padding-left: 4%;
+        padding-bottom: 1%;
+        text-align: left; /* Alinha o título à esquerda */
+    }
 
 .card-maisventidos h1{
     font-size: 28px;
-    color: #0a080a; /* Cor marrom para o título */
+    color: #0a080a; 
     font-weight: bold;
     border-bottom: 2px solid #a68dac; /* Linha sob o título */
     padding-right: 5%;
-    padding-left: 2%;
+    padding-left: 4%;
+    padding-bottom: 1%;
     text-align: left; /* Alinha o título à esquerda */
 }
 .cards-produtos {
     padding-top: 1%;
 }
 .cards-produtos{
-    width: 1250px;
-    background: #4b4b4b;
-    margin: 0 auto;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permite quebra de linha */
+    justify-content: center; /* Centraliza os produtos */
+    gap: 20px; /* Espaçamento entre os produtos */
+    margin: 20px auto; /* Centraliza horizontalmente */
+    max-width: 1200px;
+    padding: 10px;
 }
-.produtos{
-    max-width: 300px;
+.produtos {
+    position: relative; /* Necessário para posicionar o botão dentro do produto */
+    max-width: 280px;
     overflow: hidden;
+    text-align: center;
+    background: #ffffff;
+    border: 2px solid transparent; /* Borda invisível inicialmente */
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Suaviza o zoom e a borda */
+    padding-bottom: 50px;
 }
 
-/* Depoimentos */
+.produtos img {
+    max-width: 100%; /* Faz as imagens se ajustarem à largura do container */
+    height: auto;
+}
+
+.btn-comprar {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    background: #a68dac;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 1px; 
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.produtos:hover .btn-comprar {
+    opacity: 1;
+    visibility: visible;
+}
+.produtos:hover {
+    transform: scale(1.05); /* Aplica o zoom */
+    border-color: #a68dac; /* Cor da borda ao passar o mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona sombra para destaque */
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+    .cards-produtos {
+        gap: 10px; /* Reduz o espaço entre os produtos */
+    }
+
+    .produtos {
+        max-width: 45%; /* Ocupa metade da largura */
+    }
+}
+
+@media (max-width: 480px) {
+    .produtos {
+        max-width: 100%; /* Cada produto ocupa a largura total */
+    }
+}
+
+/* Layout Responsivo */
+@media (max-width: 1200px) {
+    .container-cabecalho {
+        width: 95%; /* Reduz a largura para ocupar quase toda a tela */
+        padding: 15px;
+    }
+
+    .campodebusca {
+        max-width: 200px; /* Diminui a largura do campo de busca */
+    }
+
+    .opcoes-usuario {
+        gap: 15px; /* Reduz o espaçamento entre os ícones */
+    }
+
+    .menu ul {
+        gap: 40px; /* Reduz o espaçamento entre os itens do menu */
+    }
+}
+
+@media (max-width: 992px) {
+    .container-cabecalho {
+        flex-wrap: wrap; /* Permite que os elementos quebrem linha */
+        justify-content: center; /* Centraliza os elementos */
+    }
+
+    .logo img {
+        max-width: 120px; /* Diminui o tamanho da logo */
+        margin-bottom: 10px;
+    }
+
+    .campodebusca {
+        max-width: 250px;
+        margin-bottom: 10px;
+    }
+
+    .opcoes-usuario {
+        gap: 10px; /* Reduz o espaço entre os itens */
+    }
+
+    .menu ul {
+        gap: 30px; /* Ajusta o espaçamento entre os itens */
+    }
+}
+
+@media (max-width: 768px) {
+    .menu ul {
+        flex-wrap: wrap; /* Quebra o menu em duas linhas, se necessário */
+        gap: 20px; /* Reduz ainda mais o espaçamento */
+    }
+
+    .menu a {
+        font-size: 14px; /* Reduz o tamanho do texto no menu */
+    }
+
+    .campodebusca {
+        max-width: 200px; /* Reduz o campo de busca */
+    }
+
+    .opcoes-usuario {
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .quantidade-carrinho {
+        width: 16px;
+        height: 16px;
+        font-size: 10px; /* Ajusta o número no ícone de carrinho */
+    }
+}
+
+@media (max-width: 576px) {
+    .container-cabecalho {
+        flex-direction: column; /* Organiza os elementos em uma coluna */
+        align-items: center;
+    }
+
+    .campodebusca {
+        max-width: 100%;
+        margin: 10px 0; /* Adiciona espaçamento entre os elementos */
+    }
+
+    .opcoes-usuario {
+        justify-content: center;
+    }
+
+    .menu ul {
+        flex-direction: column; /* Empilha os itens do menu verticalmente */
+        align-items: center;
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 12px; /* Tamanho reduzido para textos */
+    }
+
+    @media (max-width: 768px) {
+    .campodebusca {
+        flex-direction: column; /* Alinha o campo e o botão verticalmente */
+        gap: 10px; /* Reduz o espaçamento */
+    }
+
+    .campodebusca input {
+        width: 100%; /* Ocupa toda a largura disponível */
+    }
+
+    .email button {
+        width: 100%; /* Botão ocupa toda a largura */
+    }
+}
+}
+/*Depoimentos*/
 .container2 {
     background: #ffffff;
     padding: 20px;
     margin: 0 auto;
-    
+    flex-wrap: wrap;
+    width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around; /* Alinha os itens ao canto esquerdo */
 }
 
 .container-dep h1 {
@@ -204,16 +534,11 @@ body {
     font-weight: bold;
     border-bottom: 2px solid #a68dac; /* Linha sob o título */
     padding-right: 5%;
-    padding-left: 2%;
+    padding-left: 4%;
+    padding-bottom: 1%;
     text-align: left; /* Alinha o título à esquerda */
 }
 
-.container2 {
-    width: 1250px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around; /* Alinha os itens ao canto esquerdo */
-}
 
 .container-depoimento {
     display: flex;
@@ -232,150 +557,6 @@ body {
 }
 
 
-//* Rodapé */
-/* Bloco Contato Geral */
-.contato {
-    display: flex;
-    flex-direction: column; /* Empilha verticalmente os elementos principais */
-    align-items: center; /* Centraliza horizontalmente */
-    justify-content: center; /* Centraliza verticalmente */
-    gap: 30px; /* Espaçamento entre os elementos */
-    padding: 20px;
-
-}
-.container-tudo{
-    background: #5c2764;
-    
-}
-.containe-email{
-    width: 800px;
-    margin: 0 auto;
-    background: #14cc2d;
-}
-
-.container-iconeeescrita{
-    display: flex;
-}
-.container-iconeeescrita{
-    padding-right: 2%;
-}
-
-.email {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    justify-content: space-around;
-}
-
-.email i {
-    font-size: 40px;
-    color: #a575a5;
-}
-
-.email p {
-    padding-top: 4%;
-    padding-left: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #4b4b4b;
-
-}
-
-
-.email .campo-com-botao {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    max-width: 400px;
-    width: 100%;
-    gap: ;
-}
-
-.email input {
-    width: 1250px; /* Ocupa toda a largura */
-    padding: 10px; /* Espaçamento interno */
-    padding-bottom: 4%;
-    border: none; /* Remove borda padrão */
-    border-radius: 8px; /* Arredondamento dos campos */
-    background-color: #E8E3F5; /* Fundo cinza claro */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-.email button {
-    width: 15%; /* Ocupa toda a largura */
-    padding: 10px; /* Altura do botão */
-    background-color: #7F5A96; /* Cor roxa escura */
-    color: white; /* Cor do texto */
-    border: none; /* Remove borda */
-    border-radius: 8px; /* Arredondamento */
-    font-size: 16px; /* Tamanho do texto */
-    cursor: pointer; /* Muda o cursor ao passar */
-    transition: background-color 0.3s; /* Animação suave */
-
-}
-
-
-.email button:hover {
-    background-color: #80407e;
-}
-
-
-.final-redessociais {
-    text-align: center;
-    padding-top: 4px;
-    background: #E5CBF5;
-}
-
-.final-redessociais h4 {
-    font-size: 18px;
-    color: #000000;
-    background: #E5CBF5;
-    width: 1250px;
-    margin: 0 auto;
-    padding-top: 1%;
-}
-
-.container-redes{
-    display: flex;
-    padding-bottom: 1%;
-}
-.redes{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background: #E5CBF5;
-    width: 1250px;
-    margin: 0 auto;
-}
-
-.final-redessociais i {
-    font-size: 24px;
-    color: #333333;
-}
-
-.final-redessociais a {
-    font-size: 12px;
-    color: #000000;
-    text-decoration: none;
-}
-
-.final-redessociais a:hover{
-    text-decoration: underline;
-}
-
-footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    font-size: 12px;
-    padding: 2px;
-}
-
-
-
-
 /* Login  */
 .login {
     width: 300px;
@@ -391,7 +572,7 @@ footer {
 }
 
 .form-control {
-    background-color: #F8F2FF; /* Fundo roxo */
+    background-color: #9E7FAF; /* Fundo roxo */
     padding: 20px; /* Espaçamento interno */
     border: none; /* Remove a borda externa */
     border-radius: 15px; /* Arredondamento */
@@ -430,8 +611,8 @@ footer {
 .form-control button {
     width: 100%; /* Ocupa toda a largura */
     padding: 10px; /* Altura do botão */
-    background-color: #7F5A96; /* Cor roxa escura */
-    color: white; /* Cor do texto */
+    background-color: #ffffff; /* Cor roxa escura */
+    color: #b17ebb; /* Cor do texto */
     border: none; /* Remove borda */
     border-radius: 8px; /* Arredondamento */
     font-size: 16px; /* Tamanho do texto */
@@ -458,7 +639,7 @@ footer {
 }
 
 .container-form {
-    background-color: #F8F2FF; /* Fundo lilás bem claro */
+    background-color: #9E7FAF; /* Fundo lilás bem claro */
     padding: 20px;
     border-radius: 15px; /* Arredondamento das bordas */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
@@ -468,7 +649,14 @@ footer {
     text-align: left; /* Alinha o conteúdo à esquerda */
 }
 
-/* Labels */
+.labeleinput-container{
+    display: flex;
+}
+
+.labeleinput-container label{
+    padding-top: 2%;
+}
+
 .form-control2 label {
     display: block;
     margin-bottom: 8px; /* Espaçamento entre label e input */
@@ -477,7 +665,6 @@ footer {
     color: #4B234D; /* Roxo escuro */
 }
 
-/* Inputs */
 .form-control2 input[type="text"],
 .form-control2 input[type="email"],
 .form-control2 input[type="password"],
@@ -490,30 +677,26 @@ footer {
     background-color: #E8E3F5; /* Fundo cinza claro */
 }
 
-/* Checkbox e Radio */
 .form-control2 input[type="radio"] {
     margin-right: 10px;
 }
 
-/* Texto informativo */
 .container-form p {
     font-size: 12px;
     color: #4B234D;
     margin: 15px 0; /* Espaçamento em cima e embaixo */
 }
 
-/* Links */
 .container-form p a {
     color: #4B234D;
     text-decoration: underline;
 }
 
-/* Botão */
 .container-form button {
     width: 100%; /* Largura total do botão */
     padding: 10px;
-    background-color: #7F5A96; /* Roxo escuro */
-    color: white; /* Texto branco */
+    background-color: #ffffff; /* Roxo escuro */
+    color: #b17ebb; /* Texto branco */
     border: none;
     border-radius: 8px; /* Arredondamento */
     font-size: 16px;
@@ -521,14 +704,13 @@ footer {
     transition: background-color 0.3s;
 }
 
-/* Botão: Hover */
 .container-form button:hover {
     background-color: #6C4D85; /* Escurece no hover */
 }
 
 
-/*Pagina sobre nós*/
-.container-sobrenos h1{
+/* Página sobre nós */
+.container-sobrenos h1 {
     padding-left: 5%;
     padding-top: 4%;
     padding-bottom: 4%;
@@ -538,7 +720,8 @@ footer {
 }
 
 .bemvindos h3 {
-    width: 1230px;
+    width: 100%;  /* Agora o h3 ocupa 100% da largura */
+    max-width: 1230px; /* Define a largura máxima */
     margin: 0 auto;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -546,54 +729,62 @@ footer {
     padding-right: 1%;
     color: white;
     background: #9E7FAF;
-    border-radius: 10px; /* Bordas arredondadas */
+    border-radius: 10px;
     font-family: 'Inria Sans', sans-serif;
     font-size: 20px;
 }
 
-.imgsobrenos{
+.imgsobrenos {
     display: flex;
-    width: 1500px;
+    justify-content: space-around;
+    flex-wrap: wrap;  /* Permite que as imagens se ajustem em várias linhas */
+    width: 100%;
+    max-width: 1500px; /* Limita a largura máxima */
     margin: 0 auto;
     padding-top: 3%;
-    font-size: 18px;
-    justify-content: space-around;
     padding-bottom: 6%;
 }
 
-.imgsobrenos img{
-    width: 412px; /* Define a largura */
-    height: 450px; /* Define a altura */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
+.imgsobrenos img {
+    width: 100%;  /* A largura é agora 100% */
+    padding-left: 1%;
+    max-width: 412px; /* Mas com um limite de largura */
+    height: auto; /* Mantém a proporção */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.txt-sobrenos{
-    width: 765px;   
+
+.txt-sobrenos {
+    width: 100%;  /* Faz com que o texto ocupe 100% da largura */
+    max-width: 765px; /* Limita a largura do texto */
     font-family: 'Inria Sans', sans-serif;
     font-size: 23px;
     color: #555;
+    margin: 0 auto;
 }
 
 .conteudo {
     display: flex;
-    justify-content: center; /* Centraliza os ícones */
-    gap: 80px; /* Espaçamento entre os ícones */
-    flex-wrap: wrap; /* Ajusta layout em telas menores */
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
     padding: 40px 0;
-    background: #ffffff; /* Fundo claro */
+    background: #ffffff;
 }
 
-.icones{
+.icones {
     display: flex;
-    flex-direction: column; /* Ícone acima do texto */
-    align-items: center; /* Centraliza os elementos */
-    width: 150px; /* Largura uniforme para cada ícone */
-    text-align: center; /* Centraliza o texto */
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    text-align: center;
+    margin-bottom: 20px;
 }
+
 .icones img {
-    width: 60px; /* Tamanho dos ícones */
-    height: auto; /* Mantém a proporção */
-    margin-bottom: 10px; /* Espaçamento abaixo do ícone */
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 .icones h6 {
@@ -601,3 +792,4 @@ footer {
     font-size: 15px;
     color: #000000;
 }
+
